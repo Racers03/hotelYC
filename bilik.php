@@ -20,20 +20,19 @@ require('header.php');
     <td width="150"><b>Tindakan</b></td>
   </tr>
 <?php
-  $data1=mysqli_query($samb,"SELECT * FROM bilik ORDER BY harga DESC");
+  $data1=mysqli_query($samb,"SELECT * FROM bilik ORDER BY HargaBilik DESC");
   $no=1;
   while ($info1=mysqli_fetch_array($data1))
         {
         ?>
   <tr>
       <td><?php echo $no; ?></td>
-      <td><?php echo $info1['nama']; ?></td>
-      <td>RM <?php echo $info1['harga']; ?><td>
-      <td><a href="kemaskini_bilik.php?idbilik=
-      <?php echo $info1['idbilik'];?>">Kemaskini</a>
-            <a href="hapus_bilik.php?idbilik=
-            <?php echo $info1['idbilik'];?>">Hapus</a>
-        </td>
+      <td><?php echo $info1['NamaBilik']; ?></td>
+      <td>RM <?php echo $info1['HargaBilik']; ?><td>
+      <td>
+        <a href="kemaskini_bilik.php?idbilik=<?php echo $info1['idbilik'];?>">Kemaskini</a>
+        <a href="hapus_bilik.php?idbilik=<?php echo $info1['idbilik'];?>">Hapus</a>
+      </td>
     </tr>
     <?php $no++; } ?>
     </table>

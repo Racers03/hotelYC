@@ -14,5 +14,5 @@ Jika Pelanggan baru <a href="daftar_pelanggan.php">Daftar di sini</a>
      $data1=mysqli_query($samb,"select * from pelanggan");
      while ($info1=mysqli_fetch_array($data1))
      {
-    echo "<option hidden selected> -- pilih id"
-     }
+    echo "<option hidden selected> -- pilih id";
+     }?>

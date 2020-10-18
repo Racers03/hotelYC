@@ -27,24 +27,25 @@ require('header.php');
         ?>
  <tr>
     <td><?php echo $no; ?></td>
-    <td><?php echo $info1['nama']; ?></td>
-    <td><?php echo $info1['nama_pengguna']; ?></td>
-    <td><?php echo $info1['kata_laluan']; ?></td>
+    <td><?php echo $info1['NamaPengguna']; ?></td>
+    <td><?php echo $info1['NamaPengguna']; ?></td>
+    <td><?php echo $info1['KataLaluan']; ?></td>
     <td><a href="kemaskini_pekerja.php?idpengguna=
     <?php echo $info1['id_pengguna'];?>">Kemaskini</a>
     <?php 
     //ADMIN BOLEH DELETE AKAUN PENGGUNA - ADMIN TIDAK BOLEH
-    if ($info1['status']!="ADMIN")
+    // if ($info1['status']!="ADMIN")
+    if(true)
     {
     ?>
     <a href="hapus_pekerja.php?idpengguna=
-        <?php echo $info1['id_pengguna'];?>">Hapus</a>
+        <?php echo $info1['id_pengguna'];}?>">Hapus</a>
     <?php
-    }
+        }
     ?>
     </td>
   </tr>
-  <?php $no++ } ?>
+  <?php $no++; ?>
 </table>
 </fieldset>
 <a href="index2.php">Ke Menu Utama</a><br></center>
