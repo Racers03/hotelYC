@@ -1,7 +1,7 @@
 <?php
-// if ($_SESSION['level']=="ADMIN")
-if (true)
-{
+  // if ($_SESSION['level']=="ADMIN")
+  if (true) 
+  {
 ?>
 <!-- Papar menu untuk admin -->
 MENU UTAMA [ADMIN]
@@ -14,9 +14,9 @@ MENU UTAMA [ADMIN]
 <li><a href="laporan.php">Laporan</a></li>
 <li><a href="keluar.php">Keluar</a></li>
 <?php
-}
-else
-{
+  }
+  else
+  {
 ?>
 <!-- Papar menu untuk pekerja --> 
 MENU UTAMA [Pekerja]
@@ -25,5 +25,5 @@ MENU UTAMA [Pekerja]
 <li><a href="semak.php">Semak Tempahan bilik</a></li>
 <li><a href="keluar.php">Keluar</a></li>
 <?php
-}
+  }
 ?>
