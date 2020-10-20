@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2020 at 11:39 AM
+-- Generation Time: Oct 20, 2020 at 12:05 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -78,18 +78,19 @@ CREATE TABLE `pelanggan` (
   `NoTelefon` varchar(20) NOT NULL,
   `Jantina` varchar(1) NOT NULL,
   `Alamat` varchar(20) NOT NULL,
-  `IdPengguna` varchar(10) NOT NULL
+  `IdPengguna` varchar(10) NOT NULL,
+  `IcPelanggan` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pelanggan`
 --
 
-INSERT INTO `pelanggan` (`IdPelanggan`, `NamaPelanggan`, `NoTelefon`, `Jantina`, `Alamat`, `IdPengguna`) VALUES
-('0001', 'Chew Chao Ting', '011-69696969', 'L', '29, Jalan Hikmat', 'P0001'),
-('0002', 'Goh Yong Chen', '012-45678910', 'L', '67, Jalan Setia', 'P0002'),
-('0003', 'Jin Jia Eng', '016-49821989', 'P', '48, Jalan Batu', 'P0003'),
-('0004', 'Cheah Zi Xu', '017-12234456', 'L', '69, Jalan Tunku', 'P0004');
+INSERT INTO `pelanggan` (`IdPelanggan`, `NamaPelanggan`, `NoTelefon`, `Jantina`, `Alamat`, `IdPengguna`, `IcPelanggan`) VALUES
+('0001', 'Chew Chao Ting', '011-69696969', 'L', '29, Jalan Hikmat', 'P0001', ''),
+('0002', 'Goh Yong Chen', '012-45678910', 'L', '67, Jalan Setia', 'P0002', ''),
+('0003', 'Jin Jia Eng', '016-49821989', 'P', '48, Jalan Batu', 'P0003', ''),
+('0004', 'Cheah Zi Xu', '017-12234456', 'L', '69, Jalan Tunku', 'P0004', '');
 
 -- --------------------------------------------------------
 
