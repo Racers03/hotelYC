@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2020 at 12:05 PM
+-- Generation Time: Oct 20, 2020 at 02:08 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -101,18 +101,19 @@ INSERT INTO `pelanggan` (`IdPelanggan`, `NamaPelanggan`, `NoTelefon`, `Jantina`,
 CREATE TABLE `pengguna` (
   `IdPengguna` varchar(5) NOT NULL,
   `NamaPengguna` varchar(30) NOT NULL,
-  `KataLaluan` varchar(10) NOT NULL
+  `KataLaluan` varchar(10) NOT NULL,
+  `Status` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`IdPengguna`, `NamaPengguna`, `KataLaluan`) VALUES
-('P0001', 'Chew CT', 'cct2019'),
-('P0002', 'YC Goh', 'gych12'),
-('P0003', 'Eng JJ', 'jjeng69'),
-('P0004', 'ZX Cheah', 'czx1357');
+INSERT INTO `pengguna` (`IdPengguna`, `NamaPengguna`, `KataLaluan`, `Status`) VALUES
+('P0001', 'Chew CT', 'cct2020', 'PEKERJA'),
+('P0002', 'YC Goh', 'gych12', 'ADMIN'),
+('P0003', 'Eng JJ', 'jjeng69', 'PEKERJA'),
+('P0004', 'ZX Cheah', 'czx1357', 'ADMIN');
 
 -- --------------------------------------------------------
 
