@@ -52,11 +52,11 @@
             $bil_rekod = mysqli_num_rows($data1);
             while ($info1 = mysqli_fetch_array($data1)) {
               //SAMBUNG REKOD YANG BERKAITAN
-              $databilik = mysqli_query($samb, "SELECT * FROM bilik WHERE idbilik='$info1[idbilik]'");
+              $databilik = mysqli_query($samb, "SELECT * FROM bilik WHERE IdBilik='$info1[IdBilik]'");
               $infobilik = mysqli_fetch_array($databilik);
 
               //DAPATKAN NAMA PELANGGAN
-              $datapelanggan = mysqli_query($samb, "SELECT * FROM pelanggan WHERE icpelanggan='$info1[idpelanggan]'");
+              $datapelanggan = mysqli_query($samb, "SELECT * FROM pelanggan WHERE IdPelanggan='$info1[IdPelanggan]'");
               $infopelanggan = mysqli_fetch_array($datapelanggan);
 
               //KIRA PERBEZAAN HARI MENGINAP
@@ -73,13 +73,12 @@
           <!-- PAPAR REKOD DALAM JADUAL -->
           <tr>
             <td><?php echo $no; ?>
-            <td>
-            <td><?php echo $infobilik['nama']; ?></td>
+            <td><?php echo $infobilik['NamaBilik']; ?></td>
             <td><?php echo $masuk; ?></td>
             <td><?php echo $keluar; ?></td>
             <td><?php echo $diff->format("%a hari"); ?></td>
-            <td><?php echo $infopelanggan['nama']; ?></td>
-            <td><?php echo $infopelanggan['nomhp']; ?></td>
+            <td><?php echo $infopelanggan['NamaPelanggan']; ?></td>
+            <td><?php echo $infopelanggan['NoTelefon']; ?></td>
             <td>RM <?php echo number_format($info1['bayaran'], 2); ?></td>
             <td>RM <?php echo number_format($info1['bayaran'] * $jumHari, 2); $jumBesar += ($info1['bayaran'] * $jumHari);?></td>
           <tr>

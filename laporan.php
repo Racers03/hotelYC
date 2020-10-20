@@ -23,7 +23,7 @@
                   $data2 = mysqli_query($samb, "select * from bilik");
                   echo "<option>-</option>";
                   while ($info2 = mysqli_fetch_array($data2)) {
-                    echo "<option value='$info2[idbilik]'>$info2[nama]</option>";
+                    echo "<option value='$info2[IdBilik]'>$info2[NamaBilik]</option>";
                   }
                   ?>
                 </select>

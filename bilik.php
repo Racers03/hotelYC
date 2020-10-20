@@ -32,7 +32,6 @@
             <td><?php echo $info1['NamaBilik']; ?></td>
             <td>RM <?php echo $info1['HargaBilik']; ?>
             <td>
-            <td>
               <a href="kemaskini_bilik.php?idbilik=<?php echo $info1['IdBilik']; ?>">Kemaskini</a>
               <a href="hapus_bilik.php?idbilik=<?php echo $info1['IdBilik']; ?>">Hapus</a>
             </td>

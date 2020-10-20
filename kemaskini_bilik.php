@@ -10,7 +10,7 @@
     $nama=$_POST['nama'];
     $harga=$_POST['harga'];
     //KEMASKINI DENGAN REKOD BARU
-    $result = mysqli_query($samb, "UPDATE bilik SET nama='$nama', harga='$harga' WHERE idbilik=$idbilik");
+    $result = mysqli_query($samb, "UPDATE bilik SET NamaBilik='$nama', HargaBilik='$harga' WHERE IdBilik='$idbilik'");
     echo "<script>alert('Kemaskini rekod bilik telah berjaya'); window.location='bilik.php'</script>";
   }
 ?>
@@ -29,7 +29,7 @@
   <body>
     <center>
       <h3>KEMASKINI BILIK</h3>
-      <form name="form1" action="kemaskini_bilik.php" method="POST">
+      <form name="form1" method="POST">
         <fieldset>
           <label>Nama Bilik:</label><input type="text" name="nama" id="nama" value="<?php echo $nama;?>" /><br><br>
           <label>Harga:</label><input type="text" name="harga" id="harga" value="<?php echo $harga;?>" />

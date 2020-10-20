@@ -4,6 +4,6 @@
   //Dapatkan ID dari URL
   $idpengguna = $_GET['id'];
   //Hapus rekod tempahan
-  $result = mysqli_query($samb, "DELETE FROM tempahan WHERE idtempah='$idpengguna'");
+  $result = mysqli_query($samb, "DELETE FROM tempahan WHERE IdTempah='$idpengguna'");
   echo "<script>alert('HAPUS REKOD TEMPAHAN BERJAYA'); window.location='semak.php'</script>";
 ?>

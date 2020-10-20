@@ -10,22 +10,22 @@
     $katalaluan = $_POST['pass'];
     $aras = $_POST['level'];
     //KEMASKINI DENGAN REKOD BARU
-    $result = mysqli_query($samb, "UPDATE pengguna SET nama='$nama',kata_laluan='$katalaluan',status='$aras' WHERE nama_pengguna='$idpengguna'");
+    $result = mysqli_query($samb, "UPDATE pengguna SET NamaPengguna='$nama',KataLaluan='$katalaluan',status='$aras' WHERE IdPengguna='$idpengguna'");
     //papar mesej jika rekod berjaya dikemaskini
     echo "<script>alert('Kemaskini rekod telah berjaya'); window.location='pekerja.php'</script>";
   }
 ?>
 <?php
   //DAPATKAN ID DARI URL
-  $id = $_GET['kemaskini_id'];
+  $id = $_GET['idpengguna'];
   //PILIH DATA BERDASARKAN PADA ID REKOD
-  $result = mysqli_query($samb, "SELECT * FROM pengguna WHERE nama_pengguna='$id'");
+  $result = mysqli_query($samb, "SELECT * FROM pengguna WHERE IdPengguna='$id'");
   while ($res = mysqli_fetch_array($result)) {
     //Paparkan nilai asal
-    $user = $res['nama_pengguna'];
-    $name = $res['nama'];
-    $pass = $res['kata_laluan'];
-    $level = $res['status'];
+    $user = $res['IdPengguna'];
+    $name = $res['NamaPengguna'];
+    $pass = $res['KataLaluan'];
+    $level = $res['Status'];
   }
 ?>
 <html>
