@@ -1,16 +1,16 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2020 at 05:43 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: Oct 20, 2020 at 11:39 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -18,29 +18,20 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hotel gyc`
+-- Database: `hotel`
 --
-CREATE DATABASE IF NOT EXISTS `hotel` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `hotel`;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `alamat`
 --
--- Creation: Jan 15, 2020 at 04:12 AM
---
 
-DROP TABLE IF EXISTS `alamat`;
 CREATE TABLE `alamat` (
   `Alamat` varchar(20) NOT NULL,
   `Negeri` varchar(20) NOT NULL,
   `Poskod` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONSHIPS FOR TABLE `alamat`:
---
 
 --
 -- Dumping data for table `alamat`
@@ -57,40 +48,30 @@ INSERT INTO `alamat` (`Alamat`, `Negeri`, `Poskod`) VALUES
 --
 -- Table structure for table `bilik`
 --
--- Creation: Jan 15, 2020 at 04:08 AM
---
 
-DROP TABLE IF EXISTS `bilik`;
 CREATE TABLE `bilik` (
   `IdBilik` varchar(4) NOT NULL,
   `NamaBilik` varchar(30) NOT NULL,
-  `HargaBilik` varchar(10) NOT NULL
+  `HargaBilik` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONSHIPS FOR TABLE `bilik`:
---
 
 --
 -- Dumping data for table `bilik`
 --
 
 INSERT INTO `bilik` (`IdBilik`, `NamaBilik`, `HargaBilik`) VALUES
-('B100', 'Single Bedroom', 'RM 50'),
-('B101', 'Double Bedroom', 'RM 100'),
-('B102', 'Triple Bedroom', 'RM 150'),
-('B103', 'Quadruple Bedroom', 'RM 200'),
-('B104', 'Double Bedroom', 'RM 100');
+('B100', 'Single Bedroom', 50),
+('B101', 'Double Bedroom', 100),
+('B102', 'Triple Bedroom', 150),
+('B103', 'Quadruple Bedroom', 200),
+('B104', 'Double Bedroom', 100);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `pelanggan`
 --
--- Creation: Jan 15, 2020 at 04:33 AM
---
 
-DROP TABLE IF EXISTS `pelanggan`;
 CREATE TABLE `pelanggan` (
   `IdPelanggan` varchar(4) NOT NULL,
   `NamaPelanggan` varchar(50) NOT NULL,
@@ -99,14 +80,6 @@ CREATE TABLE `pelanggan` (
   `Alamat` varchar(20) NOT NULL,
   `IdPengguna` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONSHIPS FOR TABLE `pelanggan`:
---   `Alamat`
---       `alamat` -> `Alamat`
---   `IdPengguna`
---       `pengguna` -> `IdPengguna`
---
 
 --
 -- Dumping data for table `pelanggan`
@@ -123,19 +96,12 @@ INSERT INTO `pelanggan` (`IdPelanggan`, `NamaPelanggan`, `NoTelefon`, `Jantina`,
 --
 -- Table structure for table `pengguna`
 --
--- Creation: Jan 15, 2020 at 04:14 AM
---
 
-DROP TABLE IF EXISTS `pengguna`;
 CREATE TABLE `pengguna` (
   `IdPengguna` varchar(5) NOT NULL,
   `NamaPengguna` varchar(30) NOT NULL,
   `KataLaluan` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONSHIPS FOR TABLE `pengguna`:
---
 
 --
 -- Dumping data for table `pengguna`
@@ -152,37 +118,26 @@ INSERT INTO `pengguna` (`IdPengguna`, `NamaPengguna`, `KataLaluan`) VALUES
 --
 -- Table structure for table `tempahan`
 --
--- Creation: Jan 15, 2020 at 03:54 AM
---
 
-DROP TABLE IF EXISTS `tempahan`;
 CREATE TABLE `tempahan` (
   `IdTempah` varchar(6) NOT NULL,
   `IdPelanggan` varchar(11) NOT NULL,
   `IdBilik` varchar(4) NOT NULL,
   `tarikh_masuk` datetime(6) NOT NULL,
   `tarikh_keluar` datetime(6) NOT NULL,
-  `bayaran` varchar(10) NOT NULL
+  `bayaran` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONSHIPS FOR TABLE `tempahan`:
---   `IdBilik`
---       `bilik` -> `IdBilik`
---   `IdPelanggan`
---       `pelanggan` -> `IdPelanggan`
---
 
 --
 -- Dumping data for table `tempahan`
 --
 
 INSERT INTO `tempahan` (`IdTempah`, `IdPelanggan`, `IdBilik`, `tarikh_masuk`, `tarikh_keluar`, `bayaran`) VALUES
-('100001', '0001', 'B100', '2019-07-29 00:00:00.000000', '2019-08-05 00:00:00.000000', 'RM 400'),
-('100002', '0002', 'B101', '2019-07-30 00:00:00.000000', '2019-08-07 00:00:00.000000', 'RM 420'),
-('100003', '0003', 'B102', '2019-07-31 00:00:00.000000', '2019-08-06 00:00:00.000000', 'RM 440'),
-('100004', '0004', 'B103', '2019-08-01 00:00:00.000000', '2019-08-08 00:00:00.000000', 'RM 480'),
-('100005', '0001', 'B104', '2019-08-02 00:00:00.000000', '2019-08-09 00:00:00.000000', 'RM 500');
+('100001', '0001', 'B100', '2019-07-29 00:00:00.000000', '2019-08-05 00:00:00.000000', 400),
+('100002', '0002', 'B101', '2019-07-30 00:00:00.000000', '2019-08-07 00:00:00.000000', 420),
+('100003', '0003', 'B102', '2019-07-31 00:00:00.000000', '2019-08-06 00:00:00.000000', 440),
+('100004', '0004', 'B103', '2019-08-01 00:00:00.000000', '2019-08-08 00:00:00.000000', 480),
+('100005', '0001', 'B104', '2019-08-02 00:00:00.000000', '2019-08-09 00:00:00.000000', 500);
 
 --
 -- Indexes for dumped tables
@@ -239,36 +194,6 @@ ALTER TABLE `pelanggan`
 ALTER TABLE `tempahan`
   ADD CONSTRAINT `tempahan_ibfk_1` FOREIGN KEY (`IdBilik`) REFERENCES `bilik` (`IdBilik`),
   ADD CONSTRAINT `tempahan_ibfk_2` FOREIGN KEY (`IdPelanggan`) REFERENCES `pelanggan` (`IdPelanggan`);
-
-
---
--- Metadata
---
-USE `phpmyadmin`;
-
---
--- Metadata for table alamat
---
-
---
--- Metadata for table bilik
---
-
---
--- Metadata for table pelanggan
---
-
---
--- Metadata for table pengguna
---
-
---
--- Metadata for table tempahan
---
-
---
--- Metadata for database hotel
---
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
