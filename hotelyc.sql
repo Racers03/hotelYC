@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2020 at 02:08 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.8
+-- Generation Time: Oct 20, 2020 at 02:45 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hotel`
+-- Database: `hotelyc`
 --
 
 -- --------------------------------------------------------
@@ -76,7 +77,6 @@ CREATE TABLE `pelanggan` (
   `IdPelanggan` varchar(4) NOT NULL,
   `NamaPelanggan` varchar(50) NOT NULL,
   `NoTelefon` varchar(20) NOT NULL,
-  `Jantina` varchar(1) NOT NULL,
   `Alamat` varchar(20) NOT NULL,
   `IdPengguna` varchar(10) NOT NULL,
   `IcPelanggan` varchar(12) NOT NULL
@@ -86,11 +86,11 @@ CREATE TABLE `pelanggan` (
 -- Dumping data for table `pelanggan`
 --
 
-INSERT INTO `pelanggan` (`IdPelanggan`, `NamaPelanggan`, `NoTelefon`, `Jantina`, `Alamat`, `IdPengguna`, `IcPelanggan`) VALUES
-('0001', 'Chew Chao Ting', '011-69696969', 'L', '29, Jalan Hikmat', 'P0001', ''),
-('0002', 'Goh Yong Chen', '012-45678910', 'L', '67, Jalan Setia', 'P0002', ''),
-('0003', 'Jin Jia Eng', '016-49821989', 'P', '48, Jalan Batu', 'P0003', ''),
-('0004', 'Cheah Zi Xu', '017-12234456', 'L', '69, Jalan Tunku', 'P0004', '');
+INSERT INTO `pelanggan` (`IdPelanggan`, `NamaPelanggan`, `NoTelefon`, `Alamat`, `IdPengguna`, `IcPelanggan`) VALUES
+('0001', 'Chew Chao Ting', '011-69696969', '29, Jalan Hikmat', 'P0001', '031029070351'),
+('0002', 'Goh Yong Chen', '012-45678910', '67, Jalan Setia', 'P0002', '030119070223'),
+('0003', 'Jin Jia Eng', '016-49821989', '48, Jalan Batu', 'P0003', '030408070559'),
+('0004', 'Cheah Zi Xu', '017-12234456', '69, Jalan Tunku', 'P0004', '030921070597');
 
 -- --------------------------------------------------------
 
