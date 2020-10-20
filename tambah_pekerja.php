@@ -25,7 +25,7 @@
           <br><br><input type="submit" name="update" id="submit" value="Tambah Pengguna" />
         </fieldset>
       </form>
-      <a href="pengguna.php">Ke senarai pengguna</a><br>
+      <a href="semak.php">Ke senarai pengguna</a><br>
     </center>
   </body>
 </html>
