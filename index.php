@@ -18,7 +18,7 @@
       echo "<script>alert('ID Pengguna atau Katalaluan yang salah'); window.location='index.php'</script>";
     } else {
       $_SESSION['idpengguna'] = $row['IdPengguna'];
-      // $_SESSION['level'] = $row['status'];
+      $_SESSION['level'] = $row['Status'];
       //buka laman utama berdasarkan level login
       header("Location: index2.php");
     }

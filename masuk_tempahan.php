@@ -11,6 +11,7 @@
     //dapatkan jumlah bayaran bilik
     $duit=mysqli_query($samb,"SELECT * FROM bilik WHERE IdBilik='$bilik'");
     $tunjukDuit=mysqli_fetch_array($duit);
+    $harga=$tunjukDuit['HargaBilik'];
     
     //Periksa Bilik kosong atau tidak
     $wujud=mysqli_query($samb,
@@ -24,10 +25,14 @@
     if ($bil_rekod==0&&$masuk!=$keluar)
     {
       //tambah rekod baru ke dalam table
+      $tempid = "";
+      for($i = 0; $i <= 5; $i++) {
+        $tempnum = rand(0,9);
+        $tempid = $tempid . $tempnum;
+      }
       $rekod = "INSERT INTO tempahan
       (IdTempah,tarikh_masuk,IdBilik,IdPelanggan,tarikh_keluar,bayaran)
-      VALUES (NULL,'$masuk','$bilik','$id','$keluar',
-      '$tunjukDuit[harga]')";
+      VALUES ('$tempid','$masuk','$bilik','$id','$keluar','$harga')";
       // Melaksanakan pertanyaan rekod dengan sambungan ke pangkalan data
       $hasil = mysqli_query($samb, $rekod);
       // papar mesej berjaya atau gagal simpan rekod baru

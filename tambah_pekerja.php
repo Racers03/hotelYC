@@ -8,8 +8,13 @@
     $pekerja = $_POST['nama_pekerja'];
     $nama = $_POST['nama'];
     $katalaluan = $_POST['katalaluan'];
+    $tempid = "P";
+    for($i = 0; $i < 4; $i++) {
+      $tempnum = rand(0,9);
+      $tempid = $tempid . $tempnum;
+    }
     //TAMBAH REKOD BARU
-    $result = mysqli_query($samb, "INSERT INTO pengguna (nama_pengguna,nama,kata_laluan,status) values ('$nama','$pekerja','$katalaluan','PEKERJA')");
+    $result = mysqli_query($samb, "INSERT INTO pengguna values ('$tempid','$nama','$pekerja','$katalaluan','PEKERJA')");
     echo "<script>alert('Penambahan rekod pengguna telah berjaya'); window.location='pekerja.php'</script>";
   }
 ?>

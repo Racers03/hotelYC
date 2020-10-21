@@ -7,9 +7,14 @@
   if (isset($_POST['nama'])) {
     $nama = $_POST['nama'];
     $harga = $_POST['harga'];
+    $tempid = "B";
+    for($i = 0; $i < 3; $i++) {
+      $tempnum = rand(0,9);
+      $tempid = $tempid . $tempnum;
+    }
     //tambah rekod ke dalam jadual
-    $result = mysqli_query($samb, "INSERT INTO bilik (nama,harga) VALUES ('$nama', '$harga')");
-    echo "<script>alert('Penambahanrekod bilik telah berjaya'); window.location='bilik.php'</script>";
+    $result = mysqli_query($samb, "INSERT INTO bilik VALUES ('$tempid', '$nama', '$harga')");
+    echo "<script>alert('Penambahan rekod bilik telah berjaya'); window.location='bilik.php'</script>";
   }
 ?>
 <html>

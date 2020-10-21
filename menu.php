@@ -1,6 +1,5 @@
 <?php
-  // if ($_SESSION['level']=="ADMIN")
-  if (true) 
+  if ($_SESSION['level']=="ADMIN")
   {
 ?>
 <!-- Papar menu untuk admin -->

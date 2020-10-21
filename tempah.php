@@ -13,7 +13,7 @@
       <form method="POST" action="masuk_tempahan.php">
         <!-- BORANG CARIAN NAMA PELANGGAN MULA -->
         <label>Nama Pelanggan: </label>
-        <select name="IdPelanggan">
+        <select name="idpelanggan">
           <?php
             $data1 = mysqli_query($samb, "select * from pelanggan");
             while ($info1 = mysqli_fetch_array($data1)) {
@@ -29,7 +29,7 @@
             $data2 = mysqli_query($samb, "select * from bilik");
             while ($info2 = mysqli_fetch_array($data2)) {
               echo "<option hidden selected> -- pilih bilik -- </option>";
-              echo "<option value='$info[IdBilik]'>$info2[NamaBilik]</option>";
+              echo "<option value='$info2[IdBilik]'>$info2[NamaBilik]</option>";
             }
           ?>
         </select><br>
