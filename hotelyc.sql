@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2020 at 02:45 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Generation Time: Oct 21, 2020 at 02:10 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hotelyc`
+-- Database: `hotel`
 --
 
 -- --------------------------------------------------------
@@ -31,18 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `alamat` (
   `Alamat` varchar(20) NOT NULL,
   `Negeri` varchar(20) NOT NULL,
-  `Poskod` varchar(5) NOT NULL
+  `Poskod` varchar(5) NOT NULL,
+  `Bandar` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `alamat`
 --
 
-INSERT INTO `alamat` (`Alamat`, `Negeri`, `Poskod`) VALUES
-('29, Jalan Hikmat', 'Pulau Pinang', '11600'),
-('48, Jalan Batu', 'Perak', '11500'),
-('67, Jalan Setia', 'Pahang', '11300'),
-('69, Jalan Tunku', 'Perlis ', '11700');
+INSERT INTO `alamat` (`Alamat`, `Negeri`, `Poskod`, `Bandar`) VALUES
+('29, Jalan Hikmat', 'Pulau Pinang', '11600', ''),
+('48, Jalan Batu', 'Perak', '11500', ''),
+('67, Jalan Setia', 'Pahang', '11300', ''),
+('69, Jalan Tunku', 'Perlis ', '11700', '');
 
 -- --------------------------------------------------------
 
