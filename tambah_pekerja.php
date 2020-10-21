@@ -5,16 +5,16 @@
   require('header.php');
   //Terima rekod yang di post
   if (isset($_POST['nama'])) {
-    $pekerja = $_POST['nama_pekerja'];
     $nama = $_POST['nama'];
     $katalaluan = $_POST['katalaluan'];
+    $statuspengguna = $_POST['statuspengguna'];
     $tempid = "P";
     for($i = 0; $i < 4; $i++) {
       $tempnum = rand(0,9);
       $tempid = $tempid . $tempnum;
     }
     //TAMBAH REKOD BARU
-    $result = mysqli_query($samb, "INSERT INTO pengguna values ('$tempid','$nama','$pekerja','$katalaluan','PEKERJA')");
+    $result = mysqli_query($samb, "INSERT INTO pengguna values ('$tempid','$nama','$katalaluan','$statuspengguna')");
     echo "<script>alert('Penambahan rekod pengguna telah berjaya'); window.location='pekerja.php'</script>";
   }
 ?>
@@ -22,11 +22,16 @@
   <body>
     <center>
       <h3>TAMBAH PEKERJA</h3>
-      <form name="form1" action="tambah_pekerja.php" ,method="POST">
+      <form name="form1" method="POST">
         <fieldset>
-          <label>Nama Pekerja:</label><input type="text" name="nama_pekerja" id="nama_pekerja" /><br><br>
           <label>Nama Pengguna:</label><input type="text" name="nama" id="nama" /><br><br>
           <label>Kata Laluan:</label><input type="text" name="katalaluan" id="katalaluan" />
+          <br><br>
+          <label>Status:</label>
+          <select name="statuspengguna">
+            <option value="PEKERJA">PEKERJA</option>
+            <option value="ADMIN">ADMIN</option>
+          </select>
           <br><br><input type="submit" name="update" id="submit" value="Tambah Pengguna" />
         </fieldset>
       </form>

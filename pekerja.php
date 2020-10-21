@@ -17,6 +17,7 @@
           </tr>
           <tr>
             <td width="40"><b>Bil.</b></td>
+            <td width="120"><b>ID Pekerja</b></td>
             <td width="243"><b>Nama Pekerja</b></td>
             <td width="150"><b>Nama Pengguna</b></td>
             <td width="120"><b>Kata Laluan</b></td>
@@ -29,6 +30,7 @@
           ?>
           <tr>
             <td><?php echo $no; ?></td>
+            <td><?php echo $info1['IdPengguna']; ?></td>
             <td><?php echo $info1['NamaPengguna']; ?></td>
             <td><?php echo $info1['NamaPengguna']; ?></td>
             <td><?php echo $info1['KataLaluan']; ?></td>
