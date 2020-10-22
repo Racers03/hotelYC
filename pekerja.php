@@ -3,6 +3,8 @@
   require('config.php');
   //sambung ke fail header
   require('header.php');
+  //mulakan sesi login untuk kekalkan login 
+  session_start();
 ?>
 <html>
   <body>
@@ -38,16 +40,15 @@
               <a href="kemaskini_pekerja.php?idpengguna=<?php echo $info1['IdPengguna']; ?>">Kemaskini</a>
               <?php
                 //ADMIN BOLEH DELETE AKAUN PENGGUNA - ADMIN TIDAK BOLEH
-                // if ($info1['status']!="ADMIN")
-                if (true) {
+                if ($_SESSION['level'] == "ADMIN") {
               ?>
-              <a href="hapus_pekerja.php?idpengguna=<?php echo $info1['IdPengguna'];} ?>">Hapus</a>
+              <a href="hapus_pekerja.php?idpengguna=<?php echo $info1['IdPengguna']; ?>">Hapus</a>
               <?php
                 }
               ?>
             </td>
           </tr>
-          <?php $no++; ?>
+          <?php $no++;} ?>
         </table>
       </fieldset>
       <a href="index2.php">Ke Menu Utama</a><br>
