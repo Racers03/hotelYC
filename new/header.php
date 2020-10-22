@@ -5,7 +5,7 @@
     <title><?php echo $namasistem; ?></title>
   </head>
   <body>
-    <div class="container p-5">
+    <div class="container pl-5 pr-5 pt-5 pb-4">
       <div class="row text-primary">
         <h1>
           <?php echo $namasistem; ?>
