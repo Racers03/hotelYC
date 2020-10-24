@@ -20,15 +20,27 @@
 <html>
   <body>
     <center>
-      <h3>TAMBAH BILIK BARU</h3>
-      <form name="form1" action="tambah_bilik.php" method="POST">
-        <fieldset>
-          <label>Nama Bilik:</label><input type="text" name="nama" id="nama" /><br><br>
-          <label>Harga:</label><input type="text" name="harga" id="harga" />
-          <br><br><input type="submit" name="update" id="submit" value="Tambah Bilik" />
-        </fieldset>
-      </form>
-      <a href="bilik.php">Ke senarai bilik</a><br>
+      <h3>TAMBAH BILIK BARU</h3><br>
+      <div class="col"></div>
+      <div class="col-8">
+        <form name="form1" action="tambah_bilik.php" method="POST">
+          <div class="form-row">
+            <div class="col"></div>
+            <div class="form-group col-4 text-left">
+              <label>Nama Bilik:</label>
+              <input class="form-control" name="nama" id="nama">
+            </div>
+            <div class="form-group col-2 text-left">
+              <label>Harga:</label>
+              <input class="form-control" name="harga" id="harga">
+            </div>
+            <div class="col"></div>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" name="update" id="submit">Submit</button>
+        </form>
+      </div>
+      <div class="col"></div>
     </center>
     <?php require('./footer.php');?>
   </body>

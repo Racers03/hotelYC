@@ -1,9 +1,9 @@
 <?php
   //sambung ke pangkalan data
   require('config.php');
-  //sambung ke fail header
-  require('header.php');
   session_start();
+  //sambung ke fail header
+  require('header2.php');
   //semak sama ada data dengan IC Pelanggan telah dihantar
   if (isset($_POST['idpelanggan'])) {
     //pembolehubah untuk memegang data yang dihantar
@@ -37,33 +37,73 @@
   }
 ?>
 <html>
-  <h2>PENDAFTARAN PELANGGAN BARU</h2>
   <body>
-    <fieldset>
-      <!-- Papar Borang Pendaftaran -->
-      <form method="POST">
-        <label>Nombor Kad Pengenalan</label><br>
-        <font size="1" color="#ff0000">*Tanpa tanda -</font><br>
-        <input type="text" name="idpelanggan" placeholder="090807031234" maxlength='12' size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus><br>
-        <label>Nama Anda</label><br>
-        <font size="1" color="#ff0000">*Huruf besar</font><br>
-        <input type="text" name="nama" id="nama" placeholder="Nama pelanggan" size="60" required><br>
-        <label>Nombor Telefon</label><br>
-        <input type="text" name="nomhp" placeholder="0187654321" maxlength='12' size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus><br>
-        <label><u>Alamat:</u></label><br>
-        <label>Alamat</label><br>
-        <input type="text" name="alamat" id="alamat1" placeholder="Alamat" size="60" required><br>
-        <label>Bandar</label><br>
-        <input type="text" name="bandar" id="bandar" placeholder="Bandar" size="40" required><br>
-        <label>Poskod</label><br>
-        <input type="text" name="poskod" placeholder="18000" maxlength='5' size="7" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus><br>
-        <label>Negeri</label><br>
-        <input type="text" name="negeri" id="negeri" placeholder="Negeri" size="30" required><br><br>
-        <button type="submit">Daftar</button>
-        <button type="reset">Reset</button><br><br>
+    <center>
+      <h3>PENDAFTARAN PELANGGAN BARU</h3>
+      <small>
         *Pastikan semua maklumat ditaip dengan teliti.
-      </form>
-      <form action="main.php"><button type="submit">Home</button></form><br><br>
-    </fieldset>
+      </small><br><br>
+      <div class="col"></div>
+      <div class="col-8">
+        <!-- Papar Borang Pendaftaran -->
+        <form method="POST">
+          <div class="form-row">
+            <div class="col"></div>
+            <div class="form-group col-8 text-left">
+              <label>Nama Anda:</label><br>
+              <input class="form-control" name="nama" id="harga" placeholder="Nama pelanggan" size="60" required>
+              <small class="form-text text-muted">
+                *Huruf besar
+              </small>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="form-row">
+            <div class="col"></div>
+            <div class="form-group col-4 text-left">
+              <label>Nombor Kad Pengenalan:</label><br>
+              <input class="form-control" name="idpelanggan" id="harga" placeholder="090807031234" maxlength='12' size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+              <small class="form-text text-muted">
+                *Tanpa tanda -
+              </small>
+            </div>
+            <div class="form-group col-4 text-left">
+              <label>Nombor Telefon:</label><br>
+              <input class="form-control" name="nomhp" placeholder="0187654321" maxlength='12' size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="form-row">
+            <div class="col"></div>
+            <div class="form-group col-8 text-left">
+              <label>Alamat:</label><br>
+              <input class="form-control" type="text" name="alamat" id="alamat1" placeholder="Alamat" size="60" required>
+            </div>   
+            <div class="col"></div>
+          </div>
+          <div class="form-row">
+            <div class="col"></div>
+            <div class="form-group col-4 text-left">
+              <label>Bandar:</label><br>
+              <input class="form-control" type="text" name="bandar" id="bandar" placeholder="Bandar" size="40" required>
+            </div>
+            <div class="form-group col-2 text-left">
+              <label>Poskod:</label><br>
+              <input class="form-control" type="text" name="poskod" placeholder="18000" maxlength='5' size="7" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+            </div>
+            <div class="form-group col-2 text-left">
+              <label>Negeri:</label><br>
+              <input class="form-control" type="text" name="negeri" id="negeri" placeholder="Negeri" size="30" required>
+            </div>
+            <div class="col"></div>
+          </div>
+          <br>
+          <button class="btn btn-primary" type="submit">Daftar</button>
+          <button class="btn" type="reset">Reset</button>
+        </form>
+      </div>
+      <div class="col"></div>
+    </center>
+    <?php require('./footer.php');?>
   </body>
 </html>

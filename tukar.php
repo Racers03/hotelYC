@@ -21,6 +21,7 @@
           document.getElementsByClassName('bg-dark')[i].classList.remove('bg-light');
           document.getElementsByClassName('navbar-light')[i].classList.add('navbar-dark');
           document.getElementsByClassName('navbar-dark')[i].classList.remove('navbar-light');
+          document.getElementsByClassName('table')[i].classList.add('text-white');
         }
         if(!state) {
           localStorage.setItem("darkMode", true);
@@ -31,6 +32,7 @@
           document.getElementsByClassName('bg-light')[i].classList.remove('bg-dark');
           document.getElementsByClassName('navbar-dark')[i].classList.add('navbar-light');
           document.getElementsByClassName('navbar-light')[i].classList.remove('navbar-dark');
+          document.getElementsByClassName('table')[i].classList.remove('text-white');
         }
         if(!state) {
           localStorage.setItem("darkMode", false);

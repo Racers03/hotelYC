@@ -7,11 +7,6 @@
 <?php 
   include "tukar.php"; 
 ?>
-<style>
-  body {
-    min-height: 100%;
-  }
-</style>
 <html>
   <head>
     <!-- tukar nama sistem yang sesuai -->
@@ -31,7 +26,7 @@
         <?php echo $moto; ?>
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light mb-4">
       <div class="col"></div>
       <div class="col-9">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

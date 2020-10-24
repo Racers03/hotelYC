@@ -9,8 +9,9 @@
     <center>
       <h3>SENARAI BILIK</h3>
       <br>
-      <fieldset>
-        <table wdith="811" border="1" align="center">
+      <div class="col"></div>
+      <div class="col-8">
+        <table class="table">
           <tr>
             <td colspan="4" valign="middle" align="right">
               <b><a href="tambah_bilik.php">[+] Tambah Bilik</a></b>
@@ -41,8 +42,8 @@
             }
           ?>
         </table>
-      </fieldset>
-      <a href="main.php">Ke Menu Utama</a><br>
+      </div>
+      <div class="col"></div>
     </center>
     <?php require('./footer.php');?>
   </body>

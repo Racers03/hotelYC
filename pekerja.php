@@ -10,10 +10,11 @@
   <body>
     <center>
       <h3>SENARAI PEKERJA</h3><br>
-      <fieldset>
-        <table width="811" border="1" align="center">
+      <div class="col"></div>
+      <div class="col-8">
+        <table class="table">
           <tr>
-            <td colspan="5" valign="middle" align="right">
+            <td colspan="6" align="right">
               <b><a href="tambah_pekerja.php">[+] Tambah Pekerja</a></b>
             </td>
           </tr>
@@ -50,8 +51,8 @@
           </tr>
           <?php $no++;} ?>
         </table>
-      </fieldset>
-      <a href="main.php">Ke Menu Utama</a><br>
+      </div>
+      <div class="col"></div>
     </center>
     <?php require('./footer.php');?>
   </body>
