@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
   //terima rekod yang di post 
   if (isset($_POST['nama'])) {
     $nama = $_POST['nama'];
@@ -30,5 +30,6 @@
       </form>
       <a href="bilik.php">Ke senarai bilik</a><br>
     </center>
+    <?php require('./footer.php');?>
   </body>
 </html>

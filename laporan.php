@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
 ?>
 <html>
 <body>
@@ -70,9 +70,10 @@
         <hr />
         <div align="center" class="style15"></div>
         <center> <br><br>
-          <a href="index2.php">Ke Menu Utama</a><br>
+          <a href="main.php">Ke Menu Utama</a><br>
         </center>
       </table>
     </center>
+    <?php require('./footer.php');?>
   </body>
 </html>

@@ -2,28 +2,19 @@
 <html>
   <head>
     <!-- tukar nama sistem yang sesuai -->
+    <link rel="stylesheet" href="./script/bootstrap-4.5.3/css/bootstrap.min.css" />
     <title><?php echo $namasistem; ?></title>
   </head>
   <body>
-    <center>
-      <TABLE BORDER="0" cellpadding="0" CELLSPACING="0">
-        <TR>
-          <!-- nama fail header adalah header.jpg -->
-          <TD WIDTH="1000" HEIGHT="200" BACKGROUND="<?php echo $logo; ?>" VALIGN="center" style="background-repeat:no-repeat;">
-            <FONT SIZE="+3" COLOR="green" font face="Arial">
-              <?php echo $namasistem; ?><br><?php echo $namarumah; ?>
-            </FONT>
-            <br>
-            <FONT SIZE="+2" COLOR="red" font face="Arial">
-              <i><?php echo $moto; ?></i>
-            </FONT>
-          </TD>
-        </TR>
-      </TABLE>
-    </center>
+    <div class="container pl-5 pr-5 pt-5 pb-4">
+      <div class="row text-primary">
+        <h1>
+          <?php echo $namasistem; ?>
+        </h1>
+      </div>
+      <div class="row text-secondary">
+        <?php echo $moto; ?>
+      </div>
+    </div>
   </body>
-  <!-- panggil fail untuk besarkan huruf -->
-  <?php include "besar.php"; ?>
-  <!-- panggil fail untuk tukar warna font -->
-  <?php include "tukar.php"; ?>
 </html>

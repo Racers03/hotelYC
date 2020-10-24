@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
 ?>
 <html>
   <body>
@@ -42,7 +42,8 @@
           ?>
         </table>
       </fieldset>
-      <a href="index2.php">Ke Menu Utama</a><br>
+      <a href="main.php">Ke Menu Utama</a><br>
     </center>
+    <?php require('./footer.php');?>
   </body>
 </html>

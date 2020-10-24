@@ -1,12 +1,12 @@
 <?php
   //sambung ke pangkalan data
   require('config.php');
-  //sambung ke fail header
-  require('header.php');
   //mulakan sesi login untuk kekalkan login 
   session_start();
+  //sambung ke fail header
+  require('header.php');
   //semak sama ada data dengan ID pengguna nama telah dihantar
-  if (isset($_POST['idpengguna'])) {
+  if (isset($_POST['submit'])) {
     //pembolehubah untuk memegang data yang dihantar
     $user = $_POST['idpengguna'];
     $pass = $_POST['katalaluan'];
@@ -20,37 +20,44 @@
       $_SESSION['idpengguna'] = $row['IdPengguna'];
       $_SESSION['level'] = $row['Status'];
       //buka laman utama berdasarkan level login
-      header("Location: index2.php");
+      header("Location: ./main.php");
     }
   }
 ?>
 <html>
+  <head>
+    <link rel="stylesheet" href="./script/bootstrap-4.5.3/css/bootstrap.min.css" />
+  </head>
   <body>
-    <FIELDSET>
-      <!-- Papar jadual -->
-      <CENTER>
-        <table width='70%' border=0>
-          <tr>
-            <td width="900">
-              <FONT SIZE="+2"><U>PENGGUNA</U>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <form method="POST">
-                <p> Login masuk untuk pengguna</p>
-                <label for="InputID">ID Pengguna</label><br>
-                <input type="text" name="idpengguna" placeholder="ID Pengguna" required><br>
-                <label for="inputPassword">Katalaluan</label><br>
-                <input type="password" name="katalaluan" id="inputPassword" placeholder="Katalaluan" required><br>
-                <button type="submit">Login</button><br>
-              </form>
-            </td>
-          </tr>
-        </table>
-      </CENTER>
-    </FIELDSET>
+    <div class="container-fluid pt-3">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-8">
+          <div class="row">
+            <h4>
+              <b><u>PENGGUNA</u></b>
+            </h4>
+          </div>
+          <div class="row pb-4">
+            <small>
+              Log masuk ke sistem
+            </small>
+          </div>
+          <form method="POST">
+            <div class="form-group">
+              <label>ID Pengguna</label>
+              <input class="form-control" name="idpengguna">
+            </div>
+            <div class="form-group mb-4">
+              <label>Kata Laluan</label>
+              <input type="password" class="form-control" name="katalaluan" required>
+            </div>
+            <button type="submit" name="submit" class="btn btn-primary">Log Masuk</button>
+          </form>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <?php require('./footer.php');?>
   </body>
-  <br><br>
-  <?php require('footer.php'); ?>
 </html>

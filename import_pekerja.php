@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
 ?>
 <html>
   <body>
@@ -19,8 +19,9 @@
           <button type="submit" id="submit" name="Import">Upload</button>
         </form>
         <br>
-        <a href="index2.php">Laman Utama </a>
+        <a href="main.php">Laman Utama </a>
       </fieldset>
     </center>
+    <?php require('./footer.php');?>
   </body>
 </html>

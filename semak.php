@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
 ?>
 <html>
   <body>
@@ -91,10 +91,11 @@
         <center>
           <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam tempoh 3 hari SEBELUM tarikh masuk.</font>
           <br><br>
-          <a href="index2.php">Ke Menu Utama</a><br>
+          <a href="main.php">Ke Menu Utama</a><br>
           <a href="javascript:window.print()">Cetak Laporan</a>
         </center>
       </table>
     </center>
+    <?php require('./footer.php');?>
   </body>
 </html>

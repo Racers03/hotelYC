@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
 ?>
 <html>
   <body>
@@ -39,7 +39,8 @@
         <button type="reset">Reset</button><br><br>
         *Pilihan hanya dibenarkan sekali sahaja
       </form>
-      <a href="index2.php">Laman Utama </a>
+      <a href="main.php">Laman Utama </a>
     </FIELDSET>
+    <?php require('./footer.php');?>
   </body>
 </html>
