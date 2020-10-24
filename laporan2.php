@@ -96,7 +96,7 @@
         <hr />
         <div align="center" class="style15">* Laporan Tamat *<br /> Jumlah Rekod:<?php echo $bil_rekod; ?></div>
         <center><br><br>
-          <a href="index2.php">Ke Menu Utama</a><br>
+          <a href="main.php">Ke Menu Utama</a><br>
           <a href="javascript:window.print()">Cetak Laporan</a>
         </center>
       </td>

@@ -29,7 +29,7 @@
       $hasil = mysqli_query($samb, $sql);
       //papar mesej berjaya atau gagal simpan rekod baru
       if ($hasil) {
-        echo "<script>alert('PENDAFTARAN PELANGGAN BARU BERJAYA'); window.location='index2.php'</script>";
+        echo "<script>alert('PENDAFTARAN PELANGGAN BARU BERJAYA'); window.location='main.php'</script>";
       } else {
         echo "<script>alert('PENDAFTARAN PELANGGAN BARU GAGAL'); window.location='daftar_pelanggan.php'</script>";
       }
@@ -63,7 +63,7 @@
         <button type="reset">Reset</button><br><br>
         *Pastikan semua maklumat ditaip dengan teliti.
       </form>
-      <form action="index2.php"><button type="submit">Home</button></form><br><br>
+      <form action="main.php"><button type="submit">Home</button></form><br><br>
     </fieldset>
   </body>
 </html>
