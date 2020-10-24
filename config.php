@@ -1,6 +1,6 @@
 <?php
   //sambungan MYSQLI dengan nama $samb
-  $samb = mysqli_connect("localhost","root","","hotel");
+  $samb = mysqli_connect("localhost","root","","hotelYC");
   //semak sambungan jika gagal
   if (mysqli_connect_errno()){
     echo "Gagal sambungkan pangkalan data mysql: ".mysqli_connect_error();
