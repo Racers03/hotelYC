@@ -14,7 +14,9 @@
     }
     //tambah rekod ke dalam jadual
     $result = mysqli_query($samb, "INSERT INTO bilik VALUES ('$tempid', '$nama', '$harga')");
-    echo "<script>alert('Penambahan rekod bilik telah berjaya'); window.location='bilik.php'</script>";
+    if($result) {
+      echo "<script>alert('Penambahan rekod bilik telah berjaya'); window.location='bilik.php'</script>";
+    }
   }
 ?>
 <html>
