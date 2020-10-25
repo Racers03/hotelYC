@@ -16,6 +16,7 @@
     <script src="./script/bootstrap-4.5.3/js/bootstrap.min.js"></script>
   </head>
   <body>
+  <style body {background-image: url(hotel.jpg)}></style>
     <div class="container pl-5 pr-5 pt-5 pb-4">
       <div class="row text-primary">
         <h1>
