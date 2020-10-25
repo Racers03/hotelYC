@@ -46,11 +46,11 @@
           <form method="POST">
             <div class="form-group">
               <label>ID Pengguna</label>
-              <input class="form-control" name="idpengguna">
+              <input class="form-control" name="idpengguna" required pattern="[0-9]{12}" oninvalid="this.setCustomValidity('Sila masukkan nombor IC yang sah.');" oninput="this.setCustomValidity('');">
             </div>
             <div class="form-group mb-4">
               <label>Kata Laluan</label>
-              <input type="password" class="form-control" name="katalaluan" required>
+              <input type="password" class="form-control" name="katalaluan" required pattern="[0-9]{12}" oninvalid="this.setCustomValidity('Sila masukkan nombor IC yang sah.');" oninput="this.setCustomValidity('');">>
             </div>
             <button type="submit" name="submit" class="btn btn-primary">Log Masuk</button>
           </form>
