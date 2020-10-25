@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
   //tunggu rekod yang dihantar
   if(isset($_POST['update']))
   {
@@ -11,7 +11,9 @@
     $harga=$_POST['harga'];
     //KEMASKINI DENGAN REKOD BARU
     $result = mysqli_query($samb, "UPDATE bilik SET NamaBilik='$nama', HargaBilik='$harga' WHERE IdBilik='$idbilik'");
-    echo "<script>alert('Kemaskini rekod bilik telah berjaya'); window.location='bilik.php'</script>";
+    if($result) {
+      echo "<script>alert('Kemaskini rekod bilik telah berjaya'); window.location='bilik.php'</script>";
+    }
   }
 ?>
 <?php
@@ -28,16 +30,24 @@
 <html>
   <body>
     <center>
-      <h3>KEMASKINI BILIK</h3>
-      <form name="form1" method="POST">
-        <fieldset>
-          <label>Nama Bilik:</label><input type="text" name="nama" id="nama" value="<?php echo $nama;?>" /><br><br>
-          <label>Harga:</label><input type="text" name="harga" id="harga" value="<?php echo $harga;?>" />
-          <input type="hidden" name="idbilik" value=<?php echo $_GET['idbilik'];?>><br><br>
-          <input type="submit" name="update" id="submit" value="Kemaskini" />
-        </fieldset>
-      </form>
-      <a href="bilik.php">Ke senarai bilik</a><br>
+      <h3>KEMASKINI BILIK</h3><br>
+      <div class="col"></div>
+      <div class="col-8">
+        <form name="form1" method="POST">
+          <div class="form-group col-4 text-left">
+            <label>Nama Bilik:</label>
+            <input class="form-control" type="text" name="nama" id="nama" value="<?php echo $nama;?>" />
+          </div>
+          <div class="form-group col-3 text-left">
+            <label>Harga:</label>
+            <input class="form-control" type="text" name="harga" id="harga" value="<?php echo $harga;?>" />
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" name="update" id="submit">Kemaskini</button>
+        </form>
+      </div>
+      <div class="col"></div>
     </center>
+    <?php require('./footer.php');?>
   </body>
 </html>

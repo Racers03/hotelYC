@@ -6,5 +6,7 @@
   //Hapus rekod pekerja
   $result = mysqli_query($samb, "DELETE FROM pengguna WHERE IdPengguna='$idpengguna'");
   //Papar mesej jika berjaya hapus
-  echo "<script>alert('HAPUS REKOD PEKERJA BERJAYA'); window.location='pekerja.php'</script>";
+  if($result) {
+    echo "<script>alert('HAPUS REKOD PEKERJA BERJAYA'); window.location='pekerja.php'</script>";
+  }
 ?>

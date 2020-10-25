@@ -15,7 +15,9 @@
     }
     //TAMBAH REKOD BARU
     $result = mysqli_query($samb, "INSERT INTO pengguna values ('$tempid','$nama','$katalaluan','$statuspengguna')");
-    echo "<script>alert('Penambahan rekod pengguna telah berjaya'); window.location='pekerja.php'</script>";
+    if($result) {
+      echo "<script>alert('Penambahan rekod pengguna telah berjaya'); window.location='pekerja.php'</script>";
+    }
   }
 ?>
 <html>

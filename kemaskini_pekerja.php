@@ -2,7 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   //sambung ke fail header
-  require('header.php');
+  require('header2.php');
   //ambil rekod yang dipost
   if (isset($_POST['update'])) {
     $idpengguna = $_POST['userid'];
@@ -31,20 +31,25 @@
 <html>
   <body>
     <center>
-      <?php echo $user; ?>
       <h3>KEMASKINI REKOD PEKERJA</h3>
-      <form name="form1" action="kemaskini_pekerja.php" method="POST">
-        <fieldset>
-          <label>Nama Pengguna:</label>
-          <input type="text" name="name" id="name" value="<?php echo $name; ?>" /><br><br>
-          <label>Kata Laluan:</label>
-          <input type="text" name="pass" id="pass" value="<?php echo $pass; ?>" />
-          <input type="hidden" name="level" value=<?php echo $level; ?>>
-          <input type="hidden" name="userid" value=<?php echo $user; ?>>
-          <br><br><input type="submit" name="update" id="submit" value="Kemaskini" />
-        </fieldset>
-      </form>
-      <a href="pekerja.php">Ke senarai pekerja</a><br>
+      <?php echo $user; ?><br><br>
+      <div class="col"></div>
+      <div class="col-8">
+        <form name="form1" action="kemaskini_pekerja.php" method="POST">
+          <div class="form-group col-4 text-left">
+            <label>Nama Pengguna:</label>
+            <input class="form-control" type="text" name="name" id="name" value="<?php echo $name; ?>" />
+          </div>
+          <div class="form-group col-3 text-left">
+            <label>Kata Laluan:</label>
+            <input class="form-control" type="text" name="pass" id="pass" value="<?php echo $pass; ?>" />
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary" name="update" id="submit">Kemaskini</button>
+        </form>
+      </div>
+      <div class="col"></div>
     </center>
+    <?php require('./footer.php');?>
   </body>
 </html>
