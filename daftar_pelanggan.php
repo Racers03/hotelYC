@@ -62,14 +62,14 @@
             <div class="col"></div>
             <div class="form-group col-4 text-left">
               <label>Nombor Kad Pengenalan:</label><br>
-              <input class="form-control" name="idpelanggan" id="harga" placeholder="090807031234" maxlength='12' size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+              <input class="form-control" name="idpelanggan" id="harga" placeholder="090807031234" size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
               <small class="form-text text-muted">
                 *Tanpa tanda -
               </small>
             </div>
             <div class="form-group col-4 text-left">
               <label>Nombor Telefon:</label><br>
-              <input class="form-control" name="nomhp" placeholder="0187654321" maxlength='12' size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+              <input class="form-control" name="nomhp" placeholder="0187654321" size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
             </div>
             <div class="col"></div>
           </div>
