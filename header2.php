@@ -39,7 +39,7 @@
         <div class="col-9">
           <div class="row text-primary">
             <h1>
-              <?php echo $namasistem; ?>
+              <a href="./main.php"><?php echo $namasistem;?></a>
             </h1>
           </div>
           <div class="row text-info">
