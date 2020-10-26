@@ -3,6 +3,7 @@
   require('config.php');
   //mulakan sesi login untuk kekalkan login 
   session_start();
+  require('authcheck.php');
   //sambung ke fail header
   require('header2.php');
 ?>

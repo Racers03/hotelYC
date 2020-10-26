@@ -1,6 +1,8 @@
 <?php
   //sambung ke pangkalan data
   require('config.php');
+  session_start();
+  require('authcheck.php');
 ?>
 <html>
   <head>
@@ -38,15 +40,18 @@
             } elseif ($bilik != "-" && $bulan == "-" && $tahun == "-") {
               $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE idbilik='$bilik' ORDER by idbilik,tarikh_masuk");
             } elseif ($bilik != "-" && $bulan != "-" && $tahun == "-") {
-              $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE idbilik='$bilik' AND (MONTH(tarikh_masuk)='$bulan' OR MONTH(tarikh_keluar)='$bulan') ORDER BY idbilik,tarikh_masuk");
+              $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE idbilik='$bilik' AND (MONTH(tarikh_masuk)='$bulan' OR MONTH(tarikh_keluar)='$bulan') 
+              ORDER BY idbilik,tarikh_masuk");
             } elseif ($bilik != "-" && $bulan != "-" && $tahun != "-") {
-              $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE idbilik='$bilik' AND ((MONTH(tarikh_masuk)='$bulan' AND YEAR(tarikh_masuk)='$tahun') OR (MONTH(tarikh_keluar)='$bulan' AND YEAR(tarikh_keluar)='$tahun')) ORDER BY idbilik,tarikh_masuk");
+              $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE idbilik='$bilik' AND ((MONTH(tarikh_masuk)='$bulan' AND YEAR(tarikh_masuk)='$tahun') 
+              OR (MONTH(tarikh_keluar)='$bulan' AND YEAR(tarikh_keluar)='$tahun')) ORDER BY idbilik,tarikh_masuk");
             } elseif ($bilik == "-" && $bulan != "-" && $tahun == "-") {
               $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE MONTH(tarikh_masuk)='$bulan' OR MONTH(tarikh_keluar)='$bulan' ORDER BY idbilik,tarikh_masuk");
             } elseif ($bilik == "-" && $bulan !== "-" && $tahun != "-") {
               $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE YEAR(tarikh_masuk)='$tahun' OR YEAR(tarikh_keluar)='$tahun' ORDER BY idbilik,tarikh_masuk");
             } elseif ($bilik != "-" && $bulan == "-" && $tahun != "-") {
-              $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE idbilik='$bilik' AND YEAR(tarikh_masuk)='$tahun' OR YEAR(tarikh_keluar)='$tahun') ORDER BY idbilik,tarikh_masuk");
+              $data1 = mysqli_query($samb, "SELECT * FROM tempahan WHERE idbilik='$bilik' AND YEAR(tarikh_masuk)='$tahun' OR YEAR(tarikh_keluar)='$tahun') 
+              ORDER BY idbilik,tarikh_masuk");
             }
             $jumBesar = 0;
             $bil_rekod = mysqli_num_rows($data1);

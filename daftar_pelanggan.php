@@ -2,6 +2,7 @@
   //sambung ke pangkalan data
   require('config.php');
   session_start();
+  require('authcheck.php');
   //sambung ke fail header
   require('header2.php');
   //semak sama ada data dengan IC Pelanggan telah dihantar

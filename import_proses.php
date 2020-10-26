@@ -1,5 +1,7 @@
 <?php
   require('config.php');
+  session_start();
+  require('authcheck.php');
   if(isset($_POST["Import"])){
     $filename=$_FILES["file"]["tmp_name"];
   }

@@ -1,6 +1,8 @@
 <?php
   //sambung ke pangkalan data
   require('config.php');
+  session_start();
+  require('authcheck.php');
   //semak sama ada data telah dihantar
   if (isset($_POST['idpelanggan'])) {
     //pembolehubah untuk memegang data yang dihantar
