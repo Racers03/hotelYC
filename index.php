@@ -53,7 +53,7 @@
               <input type="password" class="form-control" name="katalaluan" required>
             </div>
             <button type="submit" name="submit" class="btn btn-primary">Log Masuk</button>
-            <button type="button" class="btn btn-link" onclick="window.location.href = './tambah_pekerja.php'">Daftar Masuk</button>
+            <button type="button" class="btn btn-link" onclick="window.location.href = './tambah_pekerja.php?redirect=true'">Daftar Masuk</button>
           </form>
         </div>
         <div class="col"></div>
