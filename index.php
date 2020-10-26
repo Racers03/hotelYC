@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./script/bootstrap-4.5.3/css/bootstrap.min.css" />
   </head>
   <body>
-    <div class="container-fluid pt-3">
+    <div class="container-fluid pt-3 text-white">
       <div class="row">
         <div class="col"></div>
         <div class="col-8">
@@ -46,11 +46,11 @@
           <form method="POST">
             <div class="form-group">
               <label>ID Pengguna</label>
-              <input class="form-control" name="idpengguna" required pattern="[0-9]{12}" oninvalid="this.setCustomValidity('Sila masukkan nombor IC yang sah.');" oninput="this.setCustomValidity('');">
+              <input class="form-control" name="idpengguna" required>
             </div>
             <div class="form-group mb-4">
               <label>Kata Laluan</label>
-              <input type="password" class="form-control" name="katalaluan" required pattern="[0-9]{12}" oninvalid="this.setCustomValidity('Sila masukkan nombor IC yang sah.');" oninput="this.setCustomValidity('');">>
+              <input type="password" class="form-control" name="katalaluan" required>
             </div>
             <button type="submit" name="submit" class="btn btn-primary">Log Masuk</button>
           </form>

@@ -16,18 +16,40 @@
     <script src="./script/bootstrap-4.5.3/js/bootstrap.min.js"></script>
   </head>
   <body>
-  <style body {background-image: url('./hotel.jpg')}></style>
-    <div class="container pl-5 pr-5 pt-5 pb-4">
-      <div class="row text-primary">
-        <h1>
-          <?php echo $namasistem; ?>
-        </h1>
-      </div>
-      <div class="row text-secondary">
-        <?php echo $moto; ?>
-      </div>
+    <style>
+      body {
+        background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('./hotel.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      .dark::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.3);
+      }
+    </style>
+    <div class="header container-fluid pl-5 pr-5 pt-5 pb-4">
+      <center>
+        <div class="col"></div>
+        <div class="col-9">
+          <div class="row text-primary">
+            <h1>
+              <?php echo $namasistem; ?>
+            </h1>
+          </div>
+          <div class="row text-info">
+            <?php echo $moto; ?>
+          </div>
+        </div>
+        <div class="col"></div>
+      </center>
     </div>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light mb-4">
+    <nav class="navbar dark navbar-expand-lg mb-4">
       <div class="col"></div>
       <div class="col-9">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +93,7 @@
             <!-- menyediakan butang tukar warna font dan butang tukar saiz teks-->
             <button type="button" class="btn btn-secondary" onclick="zoomIn();">Besar Teks</button>
             <button type="button" class="btn btn-secondary" onclick="zoomOut();">Kecil Teks</button>
-            <button type="button" class="btn btn-secondary" onclick="toggleColor();">Tukar Warna</button>
+            <!-- <button type="button" class="btn btn-secondary" onclick="toggleColor();">Tukar Warna</button> -->
           </div>
           <a class="nav-link" href="./keluar.php"><b>Log Keluar</b></a>
         </div>
