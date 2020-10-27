@@ -1,6 +1,7 @@
 <?php
   //sambung ke pangkalan data
   require('config.php');
+  session_start();
   //sambung ke fail header
   require('header2.php');
   //Terima rekod yang di post

@@ -68,6 +68,9 @@
         <div class="col"></div>
       </center>
     </div>
+    <?php 
+      if (isset($_SESSION['idpengguna'])) {
+    ?>
     <nav class="navbar dark navbar-expand-lg mb-4">
       <div class="col"></div>
       <div class="col-9">
@@ -119,5 +122,8 @@
       </div>
       <div class="col"></div>
     </nav>
+    <?php
+      }
+    ?>
   </body>
 </html>
