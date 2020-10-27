@@ -8,12 +8,18 @@
   require('header2.php');
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>SENARAI PEKERJA</h3><br>
       <div class="col"></div>
       <div class="col-8">
-        <table class="table">
+        <table class="table text-white">
+          <style>
+            .table {
+              background-color: rgba(0,0,0,0.3);
+              backdrop-filter: blur(2px);
+            }
+          </style>
           <tr>
             <td colspan="6" align="right">
               <b><a href="tambah_pekerja.php">[+] Tambah Pekerja</a></b>

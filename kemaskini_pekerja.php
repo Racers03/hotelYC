@@ -31,7 +31,7 @@
   }
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>KEMASKINI REKOD PEKERJA</h3>
       <?php echo $user; ?><br><br>

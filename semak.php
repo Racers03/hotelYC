@@ -7,13 +7,19 @@
   require('header2.php');
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>SENARAI STATUS TEMPAHAN BILIK</h3>
       <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam tempoh 3 hari SEBELUM tarikh masuk.</font><br><br>
       <div class="col"></div>
       <div class="col-8">
-        <table class="table">
+        <table class="table text-white">
+          <style>
+            .table {
+              background-color: rgba(0,0,0,0.3);
+              backdrop-filter: blur(2px);
+            }
+          </style>
           <tr>
             <td width="30"><b>Bil.</b></td>
             <td width="150"><b>Nama Bilik</b></td>

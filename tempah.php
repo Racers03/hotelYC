@@ -7,7 +7,7 @@
   require('header2.php');
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>MASUK TEMPAHAN</h3>
       Jika pelanggan baru, <a href="daftar_pelanggan.php">daftar di sini</a>.<br><br>

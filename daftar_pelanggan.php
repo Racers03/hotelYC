@@ -38,7 +38,7 @@
   }
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>PENDAFTARAN PELANGGAN BARU</h3>
       <small>

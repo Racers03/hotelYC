@@ -8,7 +8,7 @@
   require('header2.php');
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <div class="container-fluid"></div>
     <?php require('./footer.php');?>
   </body>

@@ -30,7 +30,7 @@
   }
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>KEMASKINI BILIK</h3><br>
       <div class="col"></div>

@@ -25,7 +25,7 @@
   }
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>TAMBAH PEKERJA</h3><br>
       <div class="col"></div>

@@ -7,7 +7,7 @@
   require('header2.php');
 ?>
 <html>
-  <body>
+  <body class="text-white">
     <center>
       <h3>IMPORT PEKERJA</h3><br>
       <div class="col"></div>
