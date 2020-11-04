@@ -18,7 +18,9 @@
     $result = mysqli_query($samb, "INSERT INTO pengguna values ('$tempid','$nama','$katalaluan','$statuspengguna')");
     if($result) {
       if ($_GET['redirect']) {
-        echo "<script>alert('Penambahan rekod pengguna telah berjaya. Sila Log Masuk ke Sistem.'); window.location='index.php'</script>";
+        $_SESSION['idpengguna'] = $tempid;
+        $_SESSION['level'] = $statuspengguna;
+        echo "<script>alert('Penambahan rekod pengguna telah berjaya dan akan log masuk secara automatik.'); window.location='main.php'</script>";
       } else {
         echo "<script>alert('Penambahan rekod pengguna telah berjaya'); window.location='pekerja.php'</script>";
       }
@@ -34,10 +36,10 @@
         <form name="form1" method="POST">
           <div class="form-group col-5 text-left">
             <label>Nama Pengguna:</label>
-            <input type="text" name="nama" id="nama" class="form-control"/>
+            <input type="text" name="nama" id="nama" class="form-control" required/>
           </div>
           <div class="form-group col-5 text-left">
-            <label>Kata Laluan:</label><input type="text" name="katalaluan" id="katalaluan" class="form-control"/>
+            <label>Kata Laluan:</label><input type="text" name="katalaluan" id="katalaluan" class="form-control" required pattern=".{6,25}" oninvalid="this.setCustomValidity('Sila masukkan 6 hingga 25 patah perkataan.');" oninput="this.setCustomValidity('');"/>
           </div>
           <div class="form-group col-5 text-left form-inline">
             <div class="col"></div>
